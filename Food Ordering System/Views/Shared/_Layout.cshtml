@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+    @*Special Font*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>@ViewBag.Title</title>
+
+    @RenderSection("head", false)
+</head>
+<body>
+
+    <header>
+        <h1>FoodIn</h1>
+
+        @*Role = Admin*@
+
+        @*Role = User*@
+
+        @*Role = Seller*@
+        <div class="seller-test">
+            <a asp-area="" asp-controller="Seller" asp-action="AddFood">Seller (testing)</a>
+        </div>
+
+        @*Else: *@
+        <div class="user-icon">
+			<a asp-area="" asp-controller="Account" asp-action="#"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </header>
+
+    
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        Owned by <b>AceDelight Corp.</b> &middot;
+        Copyrighted &copy; @DateTime.Today.Year
+    </footer>
+
+    @RenderSection("footer", false)
+</body>
+</html>

@@ -1,0 +1,119 @@
+﻿body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+/*header*/
+header {
+    background: #ccc;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+    header a {
+        color: inherit;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+.user-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.user-icon:hover {
+    color: #333;
+}
+
+/*main*/
+main {
+    flex: 1;
+    padding: 30px 50px;
+    overflow-y: auto;
+}
+
+/*footer*/
+footer {
+    background: #ccc;
+    padding: 10px 50px;
+    text-align: center;
+}
+
+/*Seller testing*/
+.seller-test {
+    color: red;
+    font-size: 0.9rem;
+}
+
+ /*Add Food*/
+.add-product {
+    background: #f7f7f7; 
+    border: 1px solid #ddd; 
+    border-radius: 10px;
+    padding: 25px 30px;
+    max-width: 600px;
+    margin: 30px auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .add-product h3 {
+        margin-top: 0;
+        color: #333;
+        border-bottom: 2px solid #bbb;
+        padding-bottom: 8px;
+        margin-bottom: 20px;
+    }
+
+.add-product {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+    .add-product .group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .add-product label {
+        font-weight: bold;
+        margin-bottom: 6px;
+    }
+
+    .add-product input,
+    .add-product select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+    }
+
+        .add-product input:focus,
+        .add-product select:focus {
+            outline: none;
+            border-color: #777;
+        }
+
+    .add-product button {
+        background-color: #333;
+        color: white;
+        font-weight: bold;
+        border: none;
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+        .add-product button:hover {
+            background-color: #555;
+        }

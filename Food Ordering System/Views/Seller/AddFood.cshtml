@@ -1,0 +1,45 @@
+﻿@model Food_Ordering_System.Models.FoodItemVM
+
+@{
+	ViewBag.Title = "Add Product";
+	DateTime now = DateTime.Now;
+}
+
+<p>Welcome! "Seller"</p>
+
+<section>
+	<h2>Add Product</h2>
+
+	<form class="add-product" asp-action="AddFood" asp-controller="Seller" method="post" enctype="multipart/form-data">
+		<div class="group">
+			<label asp-for="FoodName">Food Name: </label>
+			<input asp-for="FoodName" class="FoodDetail" placeholder="Enter Food Name" />
+			<span asp-validation-for="FoodName" class="text-danger"></span>
+		</div>
+
+		<div class="group">
+			<label asp-for="FoodQty">Quantity: </label>
+			<input asp-for="FoodQty" class="FoodDetail" placeholder="Enter Quantity" />
+			<span asp-validation-for="FoodQty" class="text-danger"></span>
+		</div>
+
+		<div class="group">
+			<label asp-for="Price">Price: </label>
+			<input asp-for="Price"class="FoodDetail" placeholder="Enter Price (RM)" />
+			<span asp-validation-for="Price" class="text-danger"></span>
+		</div>
+
+		<div class="group">
+			<label asp-for="FoodPicFile">Insert Food Image: </label>
+			<input asp-for="FoodPicFile" type="file" class="FoodDetail" accept="image/*" />
+			<span asp-validation-for="FoodPicFile" class="text-danger"></span>
+		</div>
+
+		<button type="submit" class="btn btn-primary">Add Product</button>
+
+	</form>
+</section>
+
+@* @section Scripts {
+	<partial name="_ValidationScriptsPartial" />
+} *@
